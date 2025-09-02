@@ -1,41 +1,72 @@
-\documentclass[a4paper,12pt]{article}
-
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{amsmath, amssymb}
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{graphicx}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
-
-\title{Título del Informe}
-\author{Autor: Nombre Apellido}
-\date{\today}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 \begin{document}
+\thispagestyle{empty}
 
-\maketitle
+% ---------- CARÁTULA ----------
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{\fill}
 
-\begin{abstract}
-Este informe presenta los resultados y el análisis de \ldots
-\end{abstract}
+    {\Large \textbf{Universidad de San Andrés}}\\[0.8cm]
 
+    {\Huge \textbf{Inferencia y Estimación}}\\[0.6cm]
+    {\LARGE \textbf{Trabajo Práctico N.º 1}}\\[1.5cm]
+
+    \begin{tikzpicture}
+      \node[draw, rounded corners=6pt, inner sep=14pt, line width=0.8pt]
+      {
+        \begin{minipage}{0.78\textwidth}
+          \begin{center}
+            {\Large \textbf{Compresión de Imágenes}}\\[0.8cm]
+            {\large \textbf{Profesores:} Matías Perlin, Pau García Gulisano, Juan Ponce}\\[0.4cm]
+          \end{center}
+        \end{minipage}
+      };
+    \end{tikzpicture}
+
+    \vspace{1.6cm}
+
+    {\large \textbf{Integrantes:}}\\[0.4cm]
+    {\large Máximo Barral -- Legajo 36585}\\[0.2cm]
+    {\large Lautaro Valentín Caminoa -- Legajo}\\[0.2cm]
+    {\large Franco Sandri -- Legajo}\\[1.4cm]
+
+    \vspace*{\fill}
+\end{center}
+\newpage
+
+% ---------- NUMERACIÓN DE PÁGINA ----------
+\setcounter{page}{1}    % comienza numeración en 1
+\pagestyle{plain}       % Número centrado
+
+% ---------- INTRODUCCIÓN ----------
 \section{Introducción}
-En esta sección se describe el objetivo del informe y el contexto del trabajo realizado.
+En épocas de \textit{big data}, el volumen de información generada y almacenada crece a un ritmo exponencial. Dentro de este escenario, la compresión de información (y en particular de imágenes) se convierte en un proceso esencial para optimizar el almacenamiento, reducir costos de transmisión y mejorar la eficiencia en el procesamiento de grandes volúmenes de información visual. El \textit{análisis de componentes principales} (PCA, por sus siglas en inglés) constituye una de las técnicas más utilizadas para la reducción de dimensionalidad. Su fundamento radica en identificar las direcciones de mayor varianza en los datos y proyectar la información en un subespacio de menor dimensión, preservando la mayor cantidad posible de la variabilidad original. 
 
+El objetivo del presente trabajo es implementar PCA en el contexto de compresión de imágenes, evaluar su desempeño mediante métricas cuantitativas y estudiar la relación entre la correlación espacial de los píxeles y la eficiencia de la compresión. Con ello, se busca profundizar tanto en la comprensión teórica del algoritmo como en su aplicación práctica en el análisis moderno de datos visuales.
+
+% ---------- METODOLOGÍA ----------
 \section{Metodología}
 Aquí se explica el procedimiento, métodos y herramientas utilizadas.
 
+% ---------- RESULTADOS ----------
 \section{Resultados}
 Se presentan los resultados obtenidos, acompañados de tablas y figuras si es necesario.
 
+% ---------- DISCUSIÓN ----------
 \section{Discusión}
 Se analizan e interpretan los resultados, comparándolos con expectativas o trabajos previos.
 
+% ---------- CONCLUSIÓN ----------
 \section{Conclusión}
 Se resumen los hallazgos principales y se sugieren posibles trabajos futuros.
-
-\section*{Referencias}
-\bibliographystyle{plain}
-\bibliography{bibliografia}
 
 \end{document}
