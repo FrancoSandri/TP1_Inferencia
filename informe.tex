@@ -55,11 +55,52 @@ El objetivo del presente trabajo es implementar PCA en el contexto de compresió
 
 % ---------- METODOLOGÍA ----------
 \section{Metodología}
-Aquí se explica el procedimiento, métodos y herramientas utilizadas.
 
 % ---------- RESULTADOS ----------
 \section{Resultados}
-Se presentan los resultados obtenidos, acompañados de tablas y figuras si es necesario.
+\subsection{Correlación entre píxeles vecinos}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{Ejercicio1a.png}
+    \caption{Gráfico de dispersión de píxeles vecinos y la correlación observada.}
+\end{figure}
+
+En la Figura 1 obtuvimos un coeficiente de correlación cercano a uno, lo que muestra una fuerte relación lineal entre píxeles vecinos. En cambio, para la Imagen 2 el coeficiente fue más bajo, mostrando menor redundancia. Esto nos dice que la Figura 1 puede comprimirse con PCA manteniendo mayor calidad, ya que los píxeles contienen información más repetitiva.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{Ejercicio1b.png}
+    \caption{Gráfico de dispersión luego de PCA.}
+\end{figure}
+
+Después de la transformación, las nuevas variables (componentes principales) estarán desacopladas (correlación cercana a cero). Esto se verá en los gráficos como una dispersión más "circular" o alineada con los ejes principales, mostrando que la redundancia entre píxeles vecinos ha sido eliminada.
+
+\subsection{Compresión mediante PCA}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Ejercicio2.png}
+    \caption{Autovalores de los bloques de la imagen y componentes conservados/descartados.}
+\end{figure}
+
+\subsection{Descompresión}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{Ejercicio3.png}
+    \caption{Comparación entre la imagen original y la reconstruida a partir de los vectores comprimidos.}
+\end{figure}
+
+\subsection{Medidas de desempeño}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{Ejercicio4a.png}
+    \caption{Error cuadrático medio (MSE) en función del porcentaje de compresión.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{Ejercicio4b.png}
+    \caption{Comparación entre distintas imágenes con distintos porcentajes de compresión.}
+\end{figure}
 
 % ---------- DISCUSIÓN ----------
 \section{Discusión}
